@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logInForm</title>
+
+    <style>
+        .wrap {
+            border : 1px solid #DBDBDB;
+            border-radius: 5px;
+            width : 350px;
+            height : 140px;
+            padding-left: 25px;
+            align-items: center;
+        }
+
+        .welcome {
+            font-size : 12px;
+            font-weight: 400;
+            margin-top : 19px;
+
+        }
+
+        .login-btn {
+            width: 318px;
+            height: 40px;
+            border : none;
+            border-radius: 4px;
+            background-color: #711BFF;
+            color : white;
+            align-items: center;
+            margin-bottom : 5px;
+        }
+
+        .under-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .find-idpwd, .sign-up {
+            color : #767676;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .sign-up {
+           margin-right: 30px;
+        }
+
+
+        .icon-user, .icon-lock {
+            width : 16px;
+            height: 16px;
+
+        }
+
+        .icon-lock, .find-id-txt,
+        .division, .find-pwd-txt,
+        .icon-user, .sign-up-txt {
+            margin-right: 4px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <p class="welcome">더 편리해진 위니브에 오신 것을 환영합니다.</p>
+        <button class="login-btn">
+            <img src="media/weniv-logo.png" alt="wniv-logo" class="weniv-logo" />
+            로그인
+        </button>
+        <section class="under-group">
+            <section class="find-idpwd">
+                <img src="media/icon-lock.png" alt="icon-lock" class="icon-lock"/>
+                <p class="find-id-txt">아이디</p>
+                <p class="division">|</p>
+                <p class="find-pwd-txt">비밀번호찾기</p>
+            </section>
+
+            <section class="sign-up">
+                <img src="media/icon-user.png" alt="icon-user" class="icon-user"/>
+                <p class="sign-up-txt">회원가입</p>
+            </section>
+        </section>
+    </section>
+
+</body>
+</html>
