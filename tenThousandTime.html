@@ -3,178 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ten Thousand Time</title>
-
-
-    <style>
-
-        @font-face {
-            font-family: 'OTEnjoystoriesBA';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'GmarketSansMedium';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-
-        body {
-            background-color: #5B2386;
-            color : #FFFFFF;
-            font-size : 24px;
-            font-weight: 400;
-            font-family: GmarketSansMedium;
-            text-align: center;
-        }
-
-        footer {
-            margin-top : 130px;
-            margin-bottom: 70px;
-        }
-
-        .practice {
-            color : #F5DF4D;
-            font-size: 36px;
-            font-family: OTEnjoystoriesBA;
-            margin-top : 120px;
-        }
-
-        button {
-            font-family: GmarketSansMedium;
-            font-weight: 1000;
-            border : none;
-            font-size : 24px;
-        }
-
-        input {
-            width : 228px;
-            height : 57px;
-            border : none;
-            border-radius: 7px;
-        }
-
-        .how-long, .goto-practice {
-            background-color: #FCEE21;
-            color : #5B2386;
-            border-radius: 56px;
-        }
-
-        .how-long {
-            width : 565px;
-            height : 66px;
-            margin-top : 115px;
-        }
-
-        .goto-practice {
-            width : 356px;
-            height : 66px;
-        }
-
-        .share {
-            background-color: #FFFFFF;
-            color : #5B2386;
-            width : 191px;
-            height : 66px;
-            border-radius: 56px;
-        }
-
-        .tenThousand {
-            width : 564px;
-            height : 112px;
-            position: relative;
-        }
-
-        .clock {
-            width : 261px;
-            height: 265px;
-            position: absolute;
-            top : 45px;
-            left : 43%;
-        }
-
-        .finger {
-            width : 64px;
-            height : 72px;
-            position : absolute;
-            top : 980px;
-        }
-
-        .weniv-logo {
-            width : 125px;
-            height: 25px;
-        }
-
-        .warnning {
-            font-size : 12px;
-        }
-
-        [class *= 'will-be-'] p {
-            display : inline;
-        }
-
-        [class *= 'quotes'] {
-            color : #FCEE21;
-            opacity: 30%;
-            font-size: 96px;
-            font-weight: 700;
-            position: absolute;
-            top : 500px;
-        }
-
-        .quotes-left{
-            left : 33%;
-        }
-
-        .quotes-right {
-            left : 65%;
-        }
-
-        .about {
-            font-size : 18px;
-            margin-top : 78px;
-            font-weight : 400;
-            position : relative;
-        }
-
-        .important {
-            font-weight: 700;
-            font-size : 24px;
-        }
-
-        .result-important {
-            font-width: 700;
-            font-size : 72px;
-            margin-top : 10px;
-        }
-
-        header {
-            margin-top : 120px;
-        }
-
-        .will-be-export {
-            margin-top : 120px;
-        }
-
-        .will-be-trainning {
-            margin-top : 27px;
-        }
-
-        .to-be-expert {
-            margin-top : 147px;
-        }
-
-        .to-be-expert p {
-            margin-top : 17px;
-        }
-
-        .btns {
-            margin-top : 127px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -185,24 +14,23 @@
         <p class="practice">“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
     </header>
 
-    <div>
         <p class="about">
             <span class="important">1만 시간의 법칙</span>은<br>
             어떤 분야의 전문가가 되기 위해서는<br>
             최소한 1만 시간의 훈련이 필요하다는 법칙이다.
+            <img src="media/따움표.png" class="quotes" alt="따움표">
         </p>
-        <span class="quotes-left">"</span>
-        <span class="quotes-right">"</span>
-    </div>
+
+
 
     <div class="will-be-export">
         <p>나는</p>
-        <input type="text" placeholder="예)프로그래밍">
+        <input type="text" placeholder="예)프로그래밍" class="input-expert" onchange="getName()">
         <p>전문가가 될 것이다.</p>
     </div>
     <div class="will-be-trainning">
         <p>그래서 앞으로 매일 하루에</p>
-        <input type="text" placeholder="예)5시간">
+        <input type="number" placeholder="예)5시간" class="input-hours" onchange="getName()">
         <p>시간씩 훈련할 것이다.</p>
     </div>
 
@@ -211,12 +39,12 @@
 
     <div class="to-be-expert">
         <p>당신은
-            <span class="result-important">프로그래밍</span>
+            <span class="result-expert"></span>
             전문가가 되기 위해서
         </p>
         <p>
             대략
-            <span class="result-important">5110</span>
+            <span class="result-days"></span>
             일 이상 훈련하셔야 합니다! :)
         </p>
     </div>
@@ -231,5 +59,35 @@
         <p class="warnning">※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br>
         수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</p>
     </footer>
+
+
+    <div class="modal">
+        <p class="fighting">화이팅!!♥♥♥</p>
+        <p class="cheer-up">당신을 응원합니다!</p>
+        <img src="media/라이캣.png" alt="라이캣"  class="licat">
+        <button class="exit-btn">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+    </div>
+
+    <script>
+
+        const resultBtn = document.querySelector(".how-long");
+        const resultField = document.querySelector(".result-expert");
+        const resultDays = document.querySelector(".result-days");
+        const showResult = document.querySelector(".to-be-expert");
+        const showBtns = document.querySelector(".btns");
+        let field, hours;
+            function getName() {
+            field = document.querySelector(".input-expert").value;
+            hours = document.querySelector(".input-hours").value;
+        }
+
+        resultBtn.addEventListener('click', function() {
+            showResult.style.display = 'block';
+            showBtns.style.display = 'block';
+            resultField.innerHTML = field;
+            resultDays.innerHTML= String(Math.ceil(10000 / (parseInt(hours) * 24)));
+        });
+
+    </script>
 </body>
 </html>
