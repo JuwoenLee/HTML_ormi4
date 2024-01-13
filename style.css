@@ -86,18 +86,18 @@ input {
 }
 
 .tenThousand {
-    width : 564px;
-    height : 112px;
+    width : 504px;
+    height : 92px;
     position: relative;
     z-index : 10;
 }
 
 .clock {
-    width : 261px;
-    height: 265px;
+    width : 216px;
+    height: 217px;
     position: relative;
     top : 70px;
-    right : 400px;
+    right : 374px;
     z-index : 1;
 }
 
